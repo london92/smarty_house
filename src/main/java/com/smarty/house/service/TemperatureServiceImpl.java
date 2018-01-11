@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by nik on 1/10/18.
@@ -27,5 +28,10 @@ public class TemperatureServiceImpl implements TemperatureService{
 
         temperatureDAO.saveTemperature(temperature);
 
+    }
+
+    @Override
+    public List<Temperature> getAllData() {
+        return temperatureDAO.getAllData();
     }
 }
